@@ -1,7 +1,11 @@
 ---
 title: test03
 date: 2019-07-09 10:59:58
+categories:
+- test
 tags:
+- test01
+- test02
 ---
 
 # hello world
