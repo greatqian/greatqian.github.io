@@ -1,0 +1,12 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	/*background-color: #B3E5FC;*/
+}
+
+#man {
+	width: 200px;
+	height: 200px;
+	background: url(./assets/images/man.png) no-repeat;
+	/*background-size: 50%;*/
+}
