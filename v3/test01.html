@@ -38,8 +38,22 @@
     }
 </style>
 <body>
-    <div class="div01">
+    <div class="div01" id="div01">
         Hello World
     </div>
 </body>
+<script>
+    window.onload = function() {
+        var title =  "  Hold fast to dreams\nFor if dreams die\nLife is a broken-winged bird\nThat cannot fly.\nHold fast to dreams\nFor when dreams go\nLife is a barren field\nFrozen with snow.\n";
+        var currentTitle = "";
+        var index = 0;
+        var titleDiv = document.getElementById("div01");
+        setInterval(function() {
+            if (index < title.length) {
+                currentTitle = currentTitle + title.charAt(index++);
+                titleDiv.innerText = currentTitle;
+            }
+        }, 160);
+    }
+</script>
 </html>
