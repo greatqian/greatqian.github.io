@@ -44,14 +44,19 @@
 </body>
 <script>
     window.onload = function() {
-        var title =  "  Hold fast to dreams\nFor if dreams die\nLife is a broken-winged bird\nThat cannot fly.\nHold fast to dreams\nFor when dreams go\nLife is a barren field\nFrozen with snow.\n";
+        var title = "Do not go gentle into that good night,\nOld age should burn and rave at close of day,\nRage,\nRage against the dying of the light.\n";
+        // var title = "不要温和地走进那良夜，\n老年应当在日暮时燃烧咆哮；\n怒斥，怒斥光明的消逝。\n";
         var currentTitle = "";
         var index = 0;
         var titleDiv = document.getElementById("div01");
-        setInterval(function() {
+        var timer1 = setInterval(function() {
             if (index < title.length) {
                 currentTitle = currentTitle + title.charAt(index++);
-                titleDiv.innerText = currentTitle;
+                titleDiv.innerText = currentTitle + (index == title.length ? "" : "_");
+            } else {
+                clearInterval(timer1, function() {
+                    console.log("timer cleared");
+                });
             }
         }, 160);
     }
