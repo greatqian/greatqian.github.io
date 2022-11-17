@@ -62,10 +62,15 @@
     #bg-list img.show {
         transform: scale(1.1);
     }
+    #colorBg {
+        width: 100%;
+        height: 100%;
+    }
 </style>
 <body>
     <div id="bg-list">
-        <img src="./assets//images/bg1.jpg"/>
+        <!-- 图片动态切换效果 -->
+        <!-- <img src="./assets//images/bg1.jpg"/>
         <img class="hide" src="./assets//images/bg2.jpg"/>
         <img class="hide" src="./assets//images/bg3.jpg"/>
         <img class="hide" src="./assets//images/bg4.jpg"/>
@@ -73,9 +78,15 @@
         <img class="hide" src="./assets//images/bg6.jpg"/>
         <img class="hide" src="./assets//images/bg7.jpg"/>
         <img class="hide" src="./assets//images/bg8.jpg"/>
-        <img class="hide" src="./assets//images/bg9.jpg"/>
-        
+        <img class="hide" src="./assets//images/bg9.jpg"/> -->
+
+        <div id="colorBg">
+
+        </div>
+
     </div>
+
+
     <div id="container">
         <div class="name">
             greatqian
@@ -121,19 +132,21 @@
         var nextShowImgIndex = 2;
         var imgCount = 9;
 
-        $("#bg-list img:nth-child(" + currentShowImgIndex + ")").addClass("show");
+        //背景图片切换效果
+        // $("#bg-list img:nth-child(" + currentShowImgIndex + ")").addClass("show");
+        // setInterval(function() {
+        //     $("#bg-list img:nth-child(" + currentShowImgIndex + ")").addClass("hide").removeClass("show");
+        //     $("#bg-list img:nth-child(" + nextShowImgIndex + ")").removeClass("hide").addClass("show");
+        //     currentShowImgIndex++;
+        //     nextShowImgIndex++;
+        //     currentShowImgIndex = (currentShowImgIndex > imgCount ? 1 : currentShowImgIndex);
+        //     nextShowImgIndex = (nextShowImgIndex > imgCount ? 1 : nextShowImgIndex);
+        //     console.log("bg change");
+        // }, 7000);
 
-        setInterval(function() {
-            
-            $("#bg-list img:nth-child(" + currentShowImgIndex + ")").addClass("hide").removeClass("show");
-            $("#bg-list img:nth-child(" + nextShowImgIndex + ")").removeClass("hide").addClass("show");
-            currentShowImgIndex++;
-            nextShowImgIndex++;
-            currentShowImgIndex = (currentShowImgIndex > imgCount ? 1 : currentShowImgIndex);
-            nextShowImgIndex = (nextShowImgIndex > imgCount ? 1 : nextShowImgIndex);
+        
+        $("#colorBg").css("background", "#85C1E9");
 
-            console.log("bg change");
-        }, 7000);
 
 	})
 </script>
